@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/python:3.9
+FROM --platform=linux/x86_64 public.ecr.aws/lambda/python:3.9
 
 COPY requirements.txt /requirements.txt
 RUN python3 -m pip install -r /requirements.txt --target ${LAMBDA_TASK_ROOT}
