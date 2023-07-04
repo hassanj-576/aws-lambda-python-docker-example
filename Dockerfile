@@ -8,6 +8,7 @@ RUN yum install gcc-c++ -y
 RUN yum install make -y
 RUN yum install m4 -y
 RUN tar -zxf /gap-4.12.2.tar.gz
+RUN yum install libgap7 -y
 RUN pwd
 WORKDIR gap-4.12.2
 RUN ./configure
